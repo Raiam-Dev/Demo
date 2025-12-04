@@ -1,0 +1,113 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.UsersController",
+    "Method": "AdicionaUsuario",
+    "RelativePath": "adiciona-usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "Demo.Models.AddUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.TokenController",
+    "Method": "CreateToken",
+    "RelativePath": "api/CreateToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Senha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.ProdutoController",
+    "Method": "AtualizarProduto",
+    "RelativePath": "api/Produto/atualizar-produto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "Demo.Domain.Produto.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.ProdutoController",
+    "Method": "CriarProduto",
+    "RelativePath": "api/Produto/criar-produto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "Demo.Domain.Produto.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.ProdutoController",
+    "Method": "DeletarProduto",
+    "RelativePath": "api/Produto/deletar-produto",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "produto",
+        "Type": "Demo.Domain.Produto.Produto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.ProdutoController",
+    "Method": "PegarProduto",
+    "RelativePath": "api/Produto/pegar-produto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.ProdutoController",
+    "Method": "TodosProdutos",
+    "RelativePath": "api/Produto/todos-produtos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

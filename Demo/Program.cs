@@ -1,3 +1,4 @@
+using Demo.Domain.User;
 using Demo.Infra.Data;
 using Demo.Repository;
 using Demo.Token;
@@ -16,7 +17,8 @@ builder.Services.AddScoped<InterfaceProduto, RepositoryProduto>();
 builder.Services.AddDbContext<ContextBase>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"));
 });
-builder.Services.AddIdentityCore<Microsoft.AspNetCore.Identity.IdentityUser>()
+
+builder.Services.AddDefaultIdentity<UserAplication>(options =>options.SignIn.RequireConfirmedEmail = false)
     .AddEntityFrameworkStores<ContextBase>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

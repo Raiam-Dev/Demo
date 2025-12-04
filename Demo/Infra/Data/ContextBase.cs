@@ -2,6 +2,7 @@
 using Demo.Domain.User;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Demo.Infra.Data
 {
@@ -15,7 +16,7 @@ namespace Demo.Infra.Data
         {
             builder.Entity<UserAplication>().ToTable("AspNetUsers").HasKey(t => t.Id);
 
-            base.OnModelCreating(builder);
+            base.OnModelCreating(builder); 
         }
     }
 }

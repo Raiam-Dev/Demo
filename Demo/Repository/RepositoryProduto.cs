@@ -23,7 +23,7 @@ namespace Demo.Repository
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<Produto> GetEntityById(int id)
+        public async Task<Produto> GetEntityById(Guid id)
         {
             var produto = await _dbContext.Produtos.FindAsync(id);
             return produto;

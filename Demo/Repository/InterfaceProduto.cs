@@ -7,7 +7,7 @@ namespace Demo.Repository
         Task Add(Produto objeto);
         Task Delete (Produto objeto);
         Task Update(Produto objeto);
-        Task<Produto> GetEntityById(int id);
+        Task<Produto> GetEntityById(Guid id);
         Task<List<Produto>> GetList();
     }
 }
