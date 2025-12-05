@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.Extensions.Logging;
 
 namespace Demo
 {
@@ -14,5 +16,7 @@ namespace Demo
         }
 
         //Palavra base dentro das classes que herdam permite acessar membros da classe pai
+
+        //StartDate (data de início) e EndDate (data de término)//
     }
 }

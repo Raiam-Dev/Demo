@@ -10,7 +10,7 @@ namespace Demo.Token
         private string subject = "";
         private string issuer = "";
         private string audience = "";
-        private Dictionary<string, string> claims = new Dictionary<string, string>();
+        private List<Claim> claims = new List<Claim>();
         private int expiryInMinutes = 5;
 
         public TokenJWTBuilder AddSecurityKey(SecurityKey securityKey)
@@ -49,7 +49,7 @@ namespace Demo.Token
             this.audience = audience;
             return this;
         }
-        public TokenJWTBuilder AddClaims(Dictionary<string, string> claims) 
+        public TokenJWTBuilder AddClaims(List<Claim> claims) 
         {
             if (claims == null) 
             {
@@ -65,12 +65,14 @@ namespace Demo.Token
         }
 
         public TokenJWT Builder()
-        { 
-            var claims = new List<Claim>
-            {
-                new Claim(JwtRegisteredClaimNames.Sub,this.subject),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-            }.Union(this.claims.Select(item => new Claim(item.Key, item.Value)));
+        {
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
+            claims.AddRange(
+            [
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Sub, this.subject),
+            ]);
 
             var token = new JwtSecurityToken(
                 issuer: this.issuer,

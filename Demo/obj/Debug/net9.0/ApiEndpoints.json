@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.UsersController",
-    "Method": "AdicionaUsuario",
-    "RelativePath": "adiciona-usuario",
+    "ContainingType": "Demo.Controller.AutenticacaoController",
+    "Method": "Cadrastrar",
+    "RelativePath": "api/Autenticacao/cadastrar",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,24 +16,55 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Demo.Controller.TokenController",
-    "Method": "CreateToken",
-    "RelativePath": "api/CreateToken",
+    "ContainingType": "Demo.Controller.AutenticacaoController",
+    "Method": "CriarRole",
+    "RelativePath": "api/Autenticacao/criar-role",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Senha",
+        "Name": "roleName",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.AutenticacaoController",
+    "Method": "Logar",
+    "RelativePath": "api/Autenticacao/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "input",
+        "Type": "Demo.Models.InputLoginRegister",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.AutenticacaoController",
+    "Method": "Logout",
+    "RelativePath": "api/Autenticacao/logout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Demo.Controller.AutenticacaoController",
+    "Method": "ListarUsuarios",
+    "RelativePath": "api/Autenticacao/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

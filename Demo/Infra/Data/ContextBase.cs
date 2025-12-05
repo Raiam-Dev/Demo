@@ -6,10 +6,8 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Demo.Infra.Data
 {
-    public class ContextBase : IdentityDbContext<UserAplication>
+    public class ContextBase(DbContextOptions options) : IdentityDbContext<UserAplication> (options)
     {
-        public ContextBase(DbContextOptions<ContextBase> options) : base(options) {}
-
         public DbSet<Produto> Produtos{ get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

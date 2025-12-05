@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Controller
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Admin")]
     public class ProdutoController : ControllerBase
     {
         private readonly InterfaceProduto _repositoryProduto;
